@@ -1,24 +1,27 @@
 {
-  "name": "JOKERLinux4",
-  "description": "سورس يوزربوت Pyrogram",
+  "name": "Devil Userbot",
+  "description": "سورس يوزربوت كامل يعمل بجلسة Pyrogram.",
+  "repository": "https://github.com/JOKERLinux4/JOKERLinux4",
+  "keywords": ["telegram", "userbot", "pyrogram"],
   "env": {
     "API_ID": {
-      "description": "ضع API ID هنا",
+      "description": "ضع API_ID هنا",
       "required": true
     },
     "API_HASH": {
-      "description": "ضع API HASH هنا",
+      "description": "ضع API_HASH هنا",
       "required": true
     },
     "SESSION": {
-      "description": "ضع هنا جلسة Pyrogram المستخرجة",
+      "description": "ضع جلسة Pyrogram هنا",
       "required": true
     }
   },
-  "addons": [],
-  "buildpacks": [
-    {
-      "url": "heroku/python"
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
     }
-  ]
+  },
+  "stack": "container"
 }
