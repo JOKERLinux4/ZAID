@@ -1,19 +1,19 @@
 {
-  "name": "Devil Userbot",
-  "description": "سورس يوزربوت Pyrogram بجلسة بدون بوت.",
+  "name": "Pyrogram Session Extractor",
+  "description": "استخراج جلسة Pyrogram بدون بوت.",
   "repository": "https://github.com/JOKERLinux4/JOKERLinux4",
   "keywords": ["telegram", "userbot", "pyrogram"],
   "env": {
     "API_ID": {
-      "description": "ضع API ID هنا",
+      "description": "اكتب هنا API ID الخاص بك",
       "required": true
     },
     "API_HASH": {
-      "description": "ضع API HASH هنا",
+      "description": "اكتب هنا API HASH الخاص بك",
       "required": true
     },
     "SESSION": {
-      "description": "ضع جلسة Pyrogram هنا",
+      "description": "ضع هنا جلسة بايروجرام",
       "required": true
     }
   },
