@@ -1,19 +1,19 @@
 {
-  "name": "Pyrogram Session Bot",
-  "description": "بوت يعمل بجلسة Pyrogram بدون بوت توكن",
+  "name": "Pyrogram Session UserBot",
+  "description": "سورس يشتغل بجلسة Pyrogram فقط — بدون أي بوت",
   "repository": "https://github.com/JOKERLinux4/JOKERLinux4",
-  "keywords": ["telegram", "pyrogram", "session"],
+  "keywords": ["telegram","userbot","pyrogram"],
   "env": {
     "API_ID": {
-      "description": "ضع API ID الخاص بك",
+      "description": "API ID من my.telegram.org",
       "required": true
     },
     "API_HASH": {
-      "description": "ضع API HASH الخاص بك",
+      "description": "API HASH من my.telegram.org",
       "required": true
     },
     "SESSION": {
-      "description": "ضع الجلسة الخاصة بك (Pyrogram Session)",
+      "description": "جلسة Pyrogram التي استخرجتها",
       "required": true
     }
   },
