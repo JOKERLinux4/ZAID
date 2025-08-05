@@ -1,19 +1,19 @@
 {
   "name": "Devil Userbot",
-  "description": "سورس يوزربوت كامل يعمل بجلسة Pyrogram.",
+  "description": "سورس يوزربوت Pyrogram بجلسة بدون بوت.",
   "repository": "https://github.com/JOKERLinux4/JOKERLinux4",
   "keywords": ["telegram", "userbot", "pyrogram"],
   "env": {
     "API_ID": {
-      "description": "ضع API_ID هنا",
+      "description": "ضع API ID هنا",
       "required": true
     },
     "API_HASH": {
-      "description": "ضع API_HASH هنا",
+      "description": "ضع API HASH هنا",
       "required": true
     },
     "SESSION": {
-      "description": "ضع جلسة بايروجرام هنا",
+      "description": "ضع جلسة Pyrogram هنا",
       "required": true
     }
   },
