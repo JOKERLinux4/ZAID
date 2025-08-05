@@ -1,19 +1,19 @@
 {
-  "name": "Pyrogram Session Extractor",
-  "description": "استخراج جلسة Pyrogram بدون بوت.",
+  "name": "Pyrogram Session",
+  "description": "سورس يعمل بجلسة Pyrogram فقط، بدون بوت",
   "repository": "https://github.com/JOKERLinux4/JOKERLinux4",
-  "keywords": ["telegram", "userbot", "pyrogram"],
+  "keywords": ["telegram", "pyrogram", "session"],
   "env": {
     "API_ID": {
-      "description": "اكتب هنا API ID الخاص بك",
+      "description": "ضع API ID هنا",
       "required": true
     },
     "API_HASH": {
-      "description": "اكتب هنا API HASH الخاص بك",
+      "description": "ضع API HASH هنا",
       "required": true
     },
     "SESSION": {
-      "description": "ضع هنا جلسة بايروجرام",
+      "description": "ضع جلسة بايروجرام هنا",
       "required": true
     }
   },
