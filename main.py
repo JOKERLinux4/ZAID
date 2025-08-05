@@ -1,23 +1,14 @@
-from pyrogram import Client
-from config import API_ID, API_HASH, SESSION, DEVELOPER_NAME, DEVELOPER_USER, SOURCE_CHANNEL
+main.py
 
-# إنشاء الجلسة من معلومات المستخدم
-app = Client(
-    session_name=SESSION,
-    api_id=API_ID,
-    api_hash=API_HASH
-)
+from pyrogram import Client, filters import os
 
-# عند التشغيل
-@app.on_message()
-def start_handler(client, message):
-    if message.text == "/start":
-        message.reply_text(
-            f"🎯 مرحبًا بك في سورس الشياطين\n\n"
-            f"👤 المطور: [{DEVELOPER_NAME}](https://t.me/{DEVELOPER_USER.strip('@')})\n"
-            f"📢 القناة: {SOURCE_CHANNEL}"
-        )
+API_ID = int(os.environ.get("API_ID")) API_HASH = os.environ.get("API_HASH") SESSION = os.environ.get("SESSION")
 
-# بدء التشغيل
-print("✅ تم تشغيل الجلسة بنجاح")
+DEVELOPER_NAME = "قِٰـِۢــآئــد آلِٰـِۢــشِٰـِۢــيِٰـِۢـآطِٰـِۢـيِٰـِـنَ" DEVELOPER_USER = "@X_5NN" SOURCE_CHANNEL = "@C_9KK"
+
+app = Client(name=SESSION, api_id=API_ID, api_hash=API_HASH, session_string=SESSION)
+
+@app.on_message(filters.command("start") & filters.private) def start(client, message): message.reply_text( f"👋 مرحبًا بك في سورس {DEVELOPER_NAME}\n" f"👤 المطور: {DEVELOPER_USER}\n" f"📣 القناة: {SOURCE_CHANNEL}" )
+
 app.run()
+
