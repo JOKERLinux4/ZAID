@@ -1,0 +1,33 @@
+
+{
+  "name": "NILS-SOURCE-PRO",
+  "description": "سورس مخصص يعمل كـ UserBot على حسابك الشخصي مع تحكم كامل بالحسابات المنصبة.",
+  "repository": "https://github.com/JOKERLinux4/NILS-CUSTOM",
+  "keywords": ["telegram", "userbot", "telethon", "pyrogram"],
+  "env": {
+    "API_ID": {
+      "description": "API ID من my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "API HASH من my.telegram.org",
+      "required": true
+    },
+    "SESSION_NAME": {
+      "description": "أرسل الجلسة هنا (Telethon)",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": []
+}
