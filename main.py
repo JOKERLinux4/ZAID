@@ -1,19 +1,14 @@
-from pyrogram import Client
-import asyncio
-import os
+from pyrogram import Client, filters
+from config import API_ID, API_HASH, SESSION, DEVELOPER_NAME, DEVELOPER_USER, SOURCE_CHANNEL
 
-API_ID = int(os.environ.get("API_ID"))
-API_HASH = os.environ.get("API_HASH")
-SESSION = os.environ.get("SESSION")
+app = Client(session_name=SESSION, api_id=API_ID, api_hash=API_HASH)
 
-DEVELOPER_NAME = "قِٰـِۢــآئــد آلِٰـِۢــشِٰـِۢــيِٰـِۢـآطِٰـِۢـيِٰـِـنَ"
-DEVELOPER_USER = "@X_5NN"
-SOURCE_CHANNEL = "@C_9KK"
+@app.on_message(filters.command("بدء") & filters.me)
+async def welcome(client, message):
+    await message.reply_text(
+        f"أهلاً بك في السورس!\n\n"
+        f"المطور: [{DEVELOPER_NAME}](https://t.me/{DEVELOPER_USER.strip('@')})\n"
+        f"القناة: {SOURCE_CHANNEL}"
+    )
 
-async def main():
-    async with Client(name="mybot", api_id=API_ID, api_hash=API_HASH, session_string=SESSION) as app:
-        me = await app.get_me()
-        print(f"✅ تم تشغيل الجلسة بنجاح: {me.first_name} (@{me.username})")
-
-if __name__ == "__main__":
-    asyncio.run(main())
+app.run()
